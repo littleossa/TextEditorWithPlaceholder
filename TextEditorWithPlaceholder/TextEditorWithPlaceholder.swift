@@ -41,6 +41,9 @@ struct TextEditorWithPlaceholder: View {
                         HStack {
                             TextField("メモを書く", text: $text)
                                 .focused($focusedField, equals: .placeholder)
+                                .onAppear {
+                                    focusedField = .placeholder
+                                }
                                 
                             Spacer()
                         }

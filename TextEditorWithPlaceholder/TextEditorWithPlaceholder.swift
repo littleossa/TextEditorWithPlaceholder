@@ -39,7 +39,7 @@ struct TextEditorWithPlaceholder: View {
                     
                     VStack {
                         HStack {
-                            TextField("メモを書く", text: $text)
+                            TextField(placeholderText, text: $text)
                                 .focused($focusedField, equals: .placeholder)
                                 .onAppear {
                                     focusedField = .placeholder

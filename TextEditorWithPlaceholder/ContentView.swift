@@ -20,10 +20,10 @@ struct ContentView: View {
             
             VStack {
                 
-                Text("メモ帳")
+                Text("Memo pad")
                     .font(.title)
                 
-                TextEditorWithPlaceholder("メモを書く", text: $text)
+                TextEditorWithPlaceholder("Write down...", text: $text)
                     .focused($isFocusedTextEditor)
             }
             .padding()

@@ -68,6 +68,6 @@ struct TextEditorWithPlaceholder: View {
 
 struct TextEditorWithPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
-        TextEditorWithPlaceholder("タイトル", text: .constant(""))
+        TextEditorWithPlaceholder("Write down...", text: .constant(""))
     }
 }

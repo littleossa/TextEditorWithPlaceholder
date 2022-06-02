@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @FocusState private var isFocusedTextEditor: Bool
     @State private var text: String = ""
     
     var body: some View {
@@ -23,8 +24,12 @@ struct ContentView: View {
                     .font(.title)
                 
                 TextEditorWithPlaceholder("メモを書く", text: $text)
+                    .focused($isFocusedTextEditor)
             }
             .padding()
+        }
+        .onTapGesture {
+            isFocusedTextEditor = false
         }
     }
 }

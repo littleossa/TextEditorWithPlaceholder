@@ -27,7 +27,7 @@ struct TextEditorWithPlaceholder: View {
     var body: some View {
         ZStack {
             
-            // Textが空の時はPlaceholderを表示する
+            // Show the placeholder if the text is empty
             if text.isEmpty {
                 
                 ZStack {
@@ -54,7 +54,7 @@ struct TextEditorWithPlaceholder: View {
                     }
                 }
 
-                // Textが空ではない時はTextEditorを表示する
+                // Show the text editor if the text is not empty
             } else {
                 TextEditor(text: $text)
                     .focused($focusedField, equals: .textEditor)
